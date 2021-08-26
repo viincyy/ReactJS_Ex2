@@ -1,23 +1,12 @@
-interface Person{
-    name: string,
-    age: number,
-    speak(lang: string): void
-    spend(amount: number): number
-}
+import { Invoice, Payment } from './classImplementInterface';
+import { hasPrint } from './interfaceForClass';
 
-const henry : Person = {
-    name: 'Henry',
-    age: 30,
-    speak(lang: 'Vietnamese'){
-        console.log(lang);
-    },
-    spend(amt: 500000): number{
-        return amt
-    }
-}
+const documentOne: hasPrint =  new Invoice('Vinamilk', 'drink milk', 50000000);
+const documentTwo: hasPrint = new Payment('Vietam airline', 'fly', 25000000);
 
-const helloPerson = (person: Person) => {
-    console.log(`Helloo ${person.name}`)
-}
+const allDocuments: hasPrint[] = [];
 
-helloPerson(henry);
+allDocuments.push(documentOne);
+allDocuments.push(documentTwo);
+
+console.log(allDocuments);
