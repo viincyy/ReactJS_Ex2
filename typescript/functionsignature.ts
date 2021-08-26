@@ -1,9 +1,9 @@
 // FUNCTION SIGNATURE
 // let greet: Function
-let greet : (a: string, b: string) => void
-greet = (name: string, greeting: string) => {
-    console.log(`${name} says ${greeting}`);
-}
+// let greet : (a: string, b: string) => void
+// greet = (name: string, greeting: string) => {
+//     console.log(`${name} says ${greeting}`);
+// }
 
 let calculate : (a: number, b:number, c: string) => number
 calculate = (numOne: number, numTwo: number, action: string) => action == 'add' ? numOne + numTwo : numOne - numTwo
