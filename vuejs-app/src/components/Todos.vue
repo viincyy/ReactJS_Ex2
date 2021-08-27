@@ -1,4 +1,5 @@
 <template>
+    <AddTodo />
     <TodoItem
         v-for="todo in todos"
         :key="todo.id"
@@ -11,10 +12,11 @@
 <script>
 import { ref } from 'vue';
 import TodoItem from './TodoItem.vue';
+import AddTodo from './AddTodo.vue';
 
 export default {
     name: 'Todos',
-    components: { TodoItem },
+    components: { TodoItem, AddTodo },
     setup() {
         const todos = ref([
             {
