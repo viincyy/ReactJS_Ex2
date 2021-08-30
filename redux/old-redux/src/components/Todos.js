@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TodoForm from './TodoForm';
 import { connect } from 'react-redux';
-import { markComplete, deleteTodo } from '../store/actions/todoAction';
+import {
+    markComplete,
+    deleteTodo,
+    getTodos,
+} from '../store/actions/todoAction';
 
-const Todos = ({ todos, markComplete, deleteTodo }) => {
+const Todos = ({ todos, markComplete, deleteTodo, getTodos }) => {
+    useEffect(() => {
+        getTodos();
+    }, []);
+
     return (
         <div className='todo-list'>
             <TodoForm />
@@ -32,4 +40,6 @@ const mapStateToProps = (state) => ({
     todos: state.myTodos.todos,
 });
 
-export default connect(mapStateToProps, { markComplete, deleteTodo })(Todos);
+export default connect(mapStateToProps, { markComplete, deleteTodo, getTodos })(
+    Todos
+);

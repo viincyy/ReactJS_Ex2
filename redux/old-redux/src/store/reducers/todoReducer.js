@@ -1,20 +1,14 @@
 const initialState = {
-    todos: [
-        {
-            id: 1,
-            title: 'Viec 1',
-            completed: false,
-        },
-        {
-            id: 2,
-            title: 'Viec 2',
-            completed: false,
-        },
-    ],
+    todos: [],
 };
 
 const todoReducer = (state = initialState, action) => {
     switch (action.type) {
+        case 'GET_TODOS':
+            return {
+                ...state,
+                todos: action.payload,
+            };
         case 'MARK_COMPLETE':
             return {
                 ...state,
