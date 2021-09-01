@@ -1,15 +1,19 @@
 import Head from 'next/head';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 
 const Layout = ({ children }) => (
     <>
         <Head>
-            <meta charset='UTF-8' />
-            <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-            <meta
-                name='viewport'
-                content='width=device-width, initial-scale=1.0'
-            ></meta>
-            <title>My Next App</title>
+            <div>
+                <meta charSet='UTF-8' />
+                <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+                <meta
+                    name='viewport'
+                    content='width=device-width, initial-scale=1.0'
+                />
+                <title>My Next App</title>
+            </div>
         </Head>
         <header>
             <Navbar bg='dark' variant='dark'>
