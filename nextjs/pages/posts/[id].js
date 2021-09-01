@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Spinner from 'react-bootstrap/Spinner';
+import spinnerStyle from '../../styles/Spinner.module.css';
 
 const Post = ({ post }) => {
     const router = useRouter();
@@ -14,7 +15,12 @@ const Post = ({ post }) => {
 
     if (router.isFallback) {
         return (
-            <Spinner animation='border' role='status' variant='dark'>
+            <Spinner
+                animation='border'
+                role='status'
+                variant='dark'
+                className={spinnerStyle.spinnerLg}
+            >
                 <span className='sr-only'>LOADING...</span>
             </Spinner>
         );
