@@ -1,6 +1,7 @@
 import Layout from '../../components/Layout';
 import Card from 'react-bootstrap/Card';
 import { getPosts } from '../../lib/Post';
+import Link from 'next/link';
 
 const Posts = ({ posts }) => {
     return (
@@ -10,6 +11,9 @@ const Posts = ({ posts }) => {
                     <Card.Body>
                         <Card.Title>{post.title}</Card.Title>
                         <Card.Text>{post.body}</Card.Text>
+                        <Link href={`/posts/${post.id}`} passHref>
+                            <Card.Link>See more</Card.Link>
+                        </Link>
                     </Card.Body>
                 </Card>
             ))}
