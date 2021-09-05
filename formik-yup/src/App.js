@@ -1,7 +1,8 @@
 import './App.css';
+import FormikValidation from './components/FormikValidation';
 
 function App() {
-    return <div className='App'></div>;
+    return <FormikValidation />;
 }
 
 export default App;
