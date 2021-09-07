@@ -1,0 +1,8 @@
+- Constructor: Được gọi ngay khi đối tượng được tạo ra
+- Copy constructor: Được gọi khi pass by value và return by value
+- Destructor: Được gọi ngay trước khi đối tượng bị hủy
+
+- Pass by value: Copy giá trị của biến vào biến khác rồi truyền vào hàm => Khi thay đổi biến bên trong hàm thì biến ngoài hàm không bị ảnh hưởng
+- Pass by reference: Truyền địa chỉ của biến vào hàm => Khi thay đổi giá trị biến bên trong hàm thì biến ngoài hàm cũng bị ảnh hưởng.
+
+- Tính đóng gói: Gom tất cả các thuộc tính phương thức của đối tượng vào trong class và dùng 2 từ khóa private, public để quy định khả năng truy xuất đến các thuộc tính, phương thức đó
