@@ -6,5 +6,30 @@
 - Pass by reference: Truyền địa chỉ của biến vào hàm => Khi thay đổi giá trị biến bên trong hàm thì biến ngoài hàm cũng bị ảnh hưởng.
 
 - Thuộc tính tĩnh: Dùng để khai báo biến toàn cục cho một lớp
-- Hàm tĩnh: Dùng khi các thao tác trong hàm không truy xuất đến các thuộc tính, phương thức của đối tượng
-- Tính đóng gói: Gom tất cả các thuộc tính phương thức của đối tượng vào trong class và dùng 2 từ khóa private, public để quy định khả năng truy xuất đến các thuộc tính, phương thức đó
+- Hàm tĩnh: Giúp truy xuất đến hàm mọi lúc mọi nơi
+
+- DESIGN PATTERN(CREATIONAL, STRUCTURAL, BEHAVIORAL)
+
+- Abstract class: Chứa một hàm thuần ảo, không thể tạo đối tượng trong lớp trừu tượng, chỉ dùng để kế thừa
+- Interface: Là một class, không chứa thuộc tính, chỉ chứa hàm thuần ảo, là bảng mô tả tất cả các hành động mà một đối tượng có thể làm
+* Phân biệt ABSTRACT CLASS && INTERFACE
+Giống: Không thể tạo đối tượng từ Interface, Abstract Class
+
+Khác: 
+    ABSTRACT CLASS
+- Chứa một hàm thuần ảo 
+- Không hỗ trợ đa kế thừa 
+- Có các biến static, non-static, final, non-final 
+- Có thể cài đặt nội dung phương thức của Interface 
+
+    INTERFACE
+- Chỉ chứa hàm thuần ảo 
+- Hỗ trợ đa kế thừa 
+- Có các biến static, final 
+- Không thể cài đặt nội dung phương thức của Abstract Class 
+
+* TỪ KHÓA THIS
+- Tham chiếu đến instance của class hiện tại
+- Gọi thuộc tính, phương thức của class hiện tại
+
+

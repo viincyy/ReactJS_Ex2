@@ -1,25 +1,24 @@
 #include <iostream>
 using namespace std;
+
+// STRUCTURAL PATTERN
 class Singleton
 {
 private:
-    // Để đảm bảo rằng không thể khởi tạo instance từ bên ngoài
+    // Không thể khởi tạo đối tượng từ bên ngoài
     Singleton()
     {
-        cout << 'Khoi tao Singleton' << endl;
+        cout << "Singleton created" << endl;
     }
-    // Khởi tạo thể hiện duy nhất của Class
+    // Thể hiện duy nhất của class
     static Singleton *instance;
 
 public:
-    // Giúp truy xuất instance mọi lúc mọi nơi
-    static Singleton *getSingletonInstance()
+    // Truy xuất instance mọi lúc, mọi nơi
+    static Singleton *getInstance()
     {
         if (instance == NULL)
-        {
-
             instance = new Singleton();
-        }
         return instance;
     }
 }
